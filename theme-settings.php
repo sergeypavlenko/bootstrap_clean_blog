@@ -46,4 +46,28 @@ function bootstrap_clean_blog_form_system_theme_settings_alter(&$form, $form_sta
     '#description' => t('Big image for nodes, display in header. The field must be created for all types of material.'),
     '#default_value' => theme_get_setting('header_image'),
   );
+
+  $form['social_buttons'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Social buttons'),
+    '#group' => 'instant_vertical_tabs',
+  );
+
+  $form['social_buttons']['social_facebook'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Facebook'),
+    '#default_value' => theme_get_setting('social_facebook'),
+  );
+
+  $form['social_buttons']['social_twitter'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Twitter'),
+    '#default_value' => theme_get_setting('social_twitter'),
+  );
+
+  $form['social_buttons']['social_github'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Github'),
+    '#default_value' => theme_get_setting('social_github'),
+  );
 }

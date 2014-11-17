@@ -10,3 +10,17 @@ base theme = bootstrap
 regions[help] = 'Help'
 regions[content] = 'Content'
 regions[footer] = 'Footer primary'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Theme Settings
+;;;;;;;;;;;;;;;;;;;;;
+
+; Header
+; --------------
+settings[header_image] = 'none'
+
+; Social links
+; --------------
+settings[social_facebook] = 'https://www.facebook.com'
+settings[social_twitter] = 'https://twitter.com'
+settings[social_github] = 'https://github.com'

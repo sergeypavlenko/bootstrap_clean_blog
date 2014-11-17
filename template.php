@@ -24,7 +24,7 @@ function bootstrap_clean_blog_preprocess_html(&$variables) {
  * Implements hook_blog_preprocess_page().
  */
 function bootstrap_clean_blog_preprocess_page(&$variables) {
-  $header_image = url(drupal_get_path('theme', 'clean_blog') . '/assets/img/home-bg.jpg');
+  $header_image = url(drupal_get_path('theme', 'bootstrap_clean_blog') . '/assets/img/home-bg.jpg');
 
   if (isset($variables['node'])) {
     $node = $variables['node'];

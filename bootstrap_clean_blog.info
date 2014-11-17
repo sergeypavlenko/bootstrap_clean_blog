@@ -30,4 +30,4 @@ settings[social_github] = 'https://github.com'
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = assets/css/clean-blog.min.css
-stylesheets[all][] = assets/css/theme.css
+stylesheets[all][] = assets/css/theme.min.css

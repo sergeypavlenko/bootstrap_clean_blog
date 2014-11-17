@@ -55,3 +55,10 @@ function bootstrap_clean_blog_html_head_alter(&$head_elements) {
     );
   }
 }
+
+/**
+ * Implements hook_menu_tree__MENUNAME().
+ */
+function bootstrap_clean_blog_menu_tree__primary(&$variables) {
+  return '<ul class="nav navbar-nav navbar-right">' . $variables['tree'] . '</ul>';
+}

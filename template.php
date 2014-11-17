@@ -44,3 +44,14 @@ function bootstrap_clean_blog_preprocess_page(&$variables) {
 
   $variables['header_image'] = $header_image;
 }
+
+/**
+ * Implements hook_html_head_alter().
+ */
+function bootstrap_clean_blog_html_head_alter(&$head_elements) {
+  if (isset($head_elements['system_meta_content_type'])) {
+    $head_elements['system_meta_content_type']['#attributes'] = array(
+      'charset' => 'utf-8',
+    );
+  }
+}

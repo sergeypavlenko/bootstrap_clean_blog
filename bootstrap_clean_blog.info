@@ -2,3 +2,11 @@ name = Bootstrap Clean Blog
 description = A Bootstrap Clean Blog sub-theme.
 core = 7.x
 base theme = bootstrap
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[help] = 'Help'
+regions[content] = 'Content'
+regions[footer] = 'Footer primary'

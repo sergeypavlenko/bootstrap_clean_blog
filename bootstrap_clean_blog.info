@@ -24,3 +24,10 @@ settings[header_image] = 'none'
 settings[social_facebook] = 'https://www.facebook.com'
 settings[social_twitter] = 'https://twitter.com'
 settings[social_github] = 'https://github.com'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = assets/css/clean-blog.min.css
+stylesheets[all][] = assets/css/theme.css

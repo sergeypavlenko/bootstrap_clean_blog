@@ -19,3 +19,28 @@ function bootstrap_clean_blog_preprocess_html(&$variables) {
 
   drupal_add_html_head($viewport, 'viewport');
 }
+
+/**
+ * Implements hook_blog_preprocess_page().
+ */
+function bootstrap_clean_blog_preprocess_page(&$variables) {
+  $header_image = url(drupal_get_path('theme', 'clean_blog') . '/assets/img/home-bg.jpg');
+
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+
+    $variables['submitted'] = t('Posted by !username on !datetime', array(
+      '!username' => $node->name,
+      '!datetime' => format_date($node->created),
+    ));
+
+    $field_header = theme_get_setting('header_image');
+
+    if (isset($node->{$field_header}['und'][0]['uri'])) {
+      $header_image = $node->{$field_header}['und'][0]['uri'];
+      $header_image = file_create_url($header_image);
+    }
+  }
+
+  $variables['header_image'] = $header_image;
+}

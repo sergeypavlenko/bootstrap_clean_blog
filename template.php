@@ -1,8 +1,7 @@
 <?php
-
 /**
  * @file
- * template.php
+ * Process and preprocess for theme.
  */
 
 /**
@@ -36,8 +35,8 @@ function bootstrap_clean_blog_preprocess_page(&$variables) {
 
     $field_header = theme_get_setting('header_image');
 
-    if (isset($node->{$field_header}['und'][0]['uri'])) {
-      $header_image = $node->{$field_header}['und'][0]['uri'];
+    if (isset($node->{$field_header}[LANGUAGE_NONE][0]['uri'])) {
+      $header_image = $node->{$field_header}[LANGUAGE_NONE][0]['uri'];
       $header_image = file_create_url($header_image);
     }
   }

@@ -17,6 +17,33 @@ function bootstrap_clean_blog_preprocess_html(&$variables) {
   );
 
   drupal_add_html_head($viewport, 'viewport');
+
+  // Css styles.
+  drupal_add_css('http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', 'external');
+  drupal_add_css('http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', 'external');
+  drupal_add_css('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', 'external');
+
+  // JS files.
+  $html5shiv = array(
+    '#tag' => 'script',
+    '#attributes' => array(
+      'src' => 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js',
+    ),
+    '#browsers' => array('IE' => 'lt IE 9', '!IE' => FALSE),
+    '#weight' => 999,
+  );
+  drupal_add_html_head($html5shiv, 'html5shiv');
+
+  $respond_js = array(
+    '#tag' => 'script',
+    '#attributes' => array(
+      'type' => 'text/javascript',
+      'src' => 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js',
+    ),
+    '#browsers' => array('IE' => 'lt IE 9', '!IE' => FALSE),
+    '#weight' => 998,
+  );
+  drupal_add_html_head($respond_js, 'respond.js');
 }
 
 /**

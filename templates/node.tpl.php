@@ -83,20 +83,21 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php if ($teaser): ?>
     <div class="post-preview">
-      <a href="<?php print $node_url; ?>">
-        <?php print render($title_prefix); ?>
+      <?php print render($title_prefix); ?>
+      <a href="<?php print $node_url; ?>" title="<?php print $title; ?>">
         <h2 class="post-title">
           <?php print $title; ?>
         </h2>
-        <?php print render($title_suffix); ?>
-        <h3 class="post-subtitle">
-          <?php
+      </a>
+      <?php print render($title_suffix); ?>
+      <h3 class="post-subtitle">
+        <?php
           hide($content['comments']);
           hide($content['links']);
           print render($content);
-          ?>
-        </h3>
-      </a>
+        ?>
+      </h3>
+
       <p class="post-meta submitted">
         <?php if ($display_submitted): ?>
           <?php print $submitted; ?>

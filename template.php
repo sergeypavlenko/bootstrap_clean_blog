@@ -55,8 +55,9 @@ function bootstrap_clean_blog_preprocess_page(&$variables) {
   if (isset($variables['node'])) {
     $node = $variables['node'];
 
+    // Full submitted for node data in page.tpl.php.
     $variables['submitted'] = t('Posted by !username on !datetime', array(
-      '!username' => $node->name,
+      '!username' => theme('username', array('account' => user_load($node->uid))),
       '!datetime' => format_date($node->created),
     ));
 
